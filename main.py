@@ -1,6 +1,17 @@
 # function to open book file
 def main():
-    book_path = "books/frankenstein.txt"
+    print("Hello! Welcome to Book Bot!")
+    print("Which book would you like a report on?")
+    print("1. Frankenstein")
+    print("2. Velveteen Rabbit")
+    choice = input()
+    if choice == "1":
+        book_path = "books/frankenstein.txt"
+    elif choice == "2":
+        book_path = "books/velveteen.txt"
+    else:
+        print("Sorry, that is not a valid choice, I'm just going to give you the velveteen rabbit report because that is easier for me")
+        book_path = "books/velveteen.txt"
     text = get_book_text(book_path)
     num_words = get_num_words(text)
     letters = letter_count(text)
